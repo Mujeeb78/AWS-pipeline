@@ -20,11 +20,13 @@ pipeline {
             }
         }
       stage('Build Docker Image with build no') {
+           withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]){
             steps {
-               withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
+               
                echo "aws"
-            }
+           
         }
+           }
       
         
     }
